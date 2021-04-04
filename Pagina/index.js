@@ -5,7 +5,6 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const { dirname } = require('path');
 
-app.set('port',80);
 app.engine('html',require('ejs').renderFile);
 app.set('view engine','ejs');
 
@@ -39,6 +38,7 @@ app.get('/productos',(req,res) =>{
    res.render('profile',{data: data});
 })
 
-app.listen(app.get('port'), () =>{
-    console.log('server on port', app.get('port'));
+const port = process.env.PORT || 80;
+app.listen(port, () =>{
+    console.log('server on port: ', port);
 });
