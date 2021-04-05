@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mysql = require ('mysql')
 const config = {
-	host: '192.168.1.50',
+	host: '192.168.128.50',
 	database: 'LIBRO',
 	user: 'will',
 	password:'admin',
