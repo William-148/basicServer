@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const mysql = require ('mysql')
 const config = {
+    connectionLimit:1000,
+    connectTimeout:60*60*1000,
+    acquireTimeout:60*60*1000,
+    timeout:60*60*1000,
 	host: '192.168.128.50',
 	database: 'LIBRO',
 	user: 'will',
